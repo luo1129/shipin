@@ -1,0 +1,66 @@
+block config
+	-var title = '个股行情';
+	-var jquery = '_jquery.min';
+	-var css = 'thigh';
+	-var js = "thigh";
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="js/flexible.js")
+		link(rel="stylesheet" href="css/#{css}.css")
+		script(src="/js/#{jquery}.js")
+		script(src="/js/#{js}.js")
+	body
+		.p-content.p-w
+			.p-titp.cWhite
+				h2.f34 航空运输
+					em.f20.cRed ＋8.39%
+				a(href="").t-arrow
+			.m-paixu
+				table.floaty(style="display:table;")
+					tr
+						th 股票名称
+						th
+							i.rise 最新价
+						th
+							i.drop 涨跌幅
+				table.mg78(style="display:table;")
+					-for(var i=0;i<7;i++)
+						tr
+							td 京东方A
+								span.f20 SH600120
+								a.click(href="")
+							td 2.33
+							td
+								em.cRed +1.23%
+						tr
+							td 京东方A
+								span.f20 SH600120
+								a.click(href="")
+							td 2.33
+							td
+								em.cGary +1.23%
+						tr
+							td 京东方A
+								span.f20 SH600120
+								a.click(href="")
+							td 2.33
+							td
+								em.cGreen +1.23%
+
+
+
+
+
+
+
+
+
+
+

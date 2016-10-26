@@ -1,0 +1,30 @@
+block config
+	-var title = '投资大师';
+	-var css = 'kxlist';
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="/js/flexible.js")
+		link(rel="stylesheet" href="/css/#{css}.css")
+	body
+		.p-w
+			.h-kuaixun
+				-for(var i=0;i<16;i++)
+					.list.cBlack
+						a(href="")
+							.tip.f28
+								span 今日，股指低开杀跌，单日大阴之下，已连续两个交易日大跌，累计近200点的跌幅。
+								img(src="/img/174-130.jpg")
+						dl.bottom.f24
+							dt.left
+								a(href="")
+									img(src="/img/logoa.png")
+									span 投资大师
+									i 产品
+							dd.cGray.right 今天 9:00

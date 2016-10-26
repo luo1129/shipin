@@ -1,0 +1,127 @@
+block config
+	-var title = 'shipin2';
+	-var css = 'shipin2';
+	-var jquery = '_jquery.min';
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		meta(name="screen-orientation" content="portrait")
+		meta(name="x5-orientation" content="portrait")
+		meta(name="msapplication-tap-highlight" content="no")
+		script(src="js/flexible.js")
+		script(src="/js/#{jquery}.js")
+		link(rel="stylesheet" href="css/#{css}.css")
+	body
+		.p-w
+			.picVideo
+				.pictop
+					img(src="/img/pic750.jpg")
+					a(href="")
+				.playervideo#player
+				script(src="http://yuntv.letv.com/player/vrp/vrp.js")
+				script.
+					var player = new CloudVodPlayer();player.init({p:102,pu:1867,uu:867792,vu:200555014},"player")
+				ul.pinglunList.f30
+					li.hover 评论互动
+					li 专属顾问
+					li 节目单
+			.videoBox
+				.vibpinglun.list
+					-for(var i=0;i<4;i++)
+						dl
+							dt
+								img(src="/img/touxiang.png")
+							dd
+								span.f22 马尔蒂尼
+								p.f30 不知道直播节目每天怎么安排的不知道直播节目每天怎么安排的不知道直播节目每天怎么安排的
+						dl
+							dt
+								img(src="/img/logoa.png")
+							dd
+								span.f22.cYellowa
+									i.f18  
+									| 马尔蒂尼
+								p.f30 11111111111111111111111111111111111111111111111111111111
+				.vibguwen.none.list
+					-for(var i=0;i<4;i++)
+						.listLeft
+							.top
+								i.f24 上午10:30
+							dl
+								dt
+									img(src="/img/touxiang.png")
+								dd.f30 
+									p 您好，我是投顾邦客服，有什么可以帮助您？
+						.listRgt
+							.top
+								i.f24 上午10:30
+							dl
+								dt
+									img(src="/img/logoa.png")
+								dd.f30 
+									p 1111111111111111111111111111111111111111111111111111111
+
+				dl.vibsptext.none.list
+					dt.f32 时间的节目单
+					dd.f30 10月17日联播节目单<br><br>9:15-10:30<br>讲师：陈易<br>主题：反弹格局中的市场机会分析<br><br>10:30-11:45<br>讲师：李国强<br>主题：指数分析、盘中走势与机会解读<br><br>12:45-13:30<br>讲师：刘奕敏<br>主题：在振荡行情中如何把握短线买卖机会 <br><br>13:30-14:30<br>讲师：卢申华 <br>主题：后市行情的展望<br><br>14:30-15:15<br>讲师：胡岗<br>主题：尾盘分析总结<br><br>
+			.videoListy
+				.vibshuruPl
+					input(type="text" placeholder="投顾邦邀请您快来参与互动！")
+					button.disabled 发送
+				.vibshuruPl.none
+					input(type="text" placeholder="请输入您要咨询的问题…")
+					button 发送
+				.vibs
+			dl.maError.none
+				dd
+				dt.f30 邀请码错误 请重新输入
+
+		.floatingTsa.none
+			h2 提示
+			dl
+				dt 你可登录或填写邀请码后即可享用评论互动或顾问服务 
+					a(href="").cRed 去登录
+				dd
+					input(type="text" placeholder="输入邀请码（选填）")
+			.bottom
+				span 取消
+				a(href="").cBlue 确定
+		.WINBG.none
+			div
+		script.
+			var tsat = $('.floatingTsa');
+			var oPl = $('.list','.videoBox'),
+				aList = $('.pinglunList'),
+				videoLis = $('div','.videoListy')
+				heigh = $('.videoListy').height()
+			aList.on('click','li',function(){
+				var _this = $(this)
+				var _index = _this.index();
+				_this.addClass('hover').siblings().removeClass('hover');
+				oPl.addClass('none').eq(_index).removeClass('none')
+				videoLis.addClass('none').eq(_index).removeClass('none')
+				if(_index===2){
+					 $('.videoBox').css({
+					 	bottom:0
+					 })
+				}else{
+					$('.videoBox').css({
+					 	bottom:heigh
+					 })
+				}
+			})
+			//- $('.vibshuruPl').on('click',function(){
+			//- 	$('.WINBG').show();
+			//- 	tsat.show();
+			//- })
+			//- tsat.on('click','span',function(){
+			//- 	$('.WINBG').hide();
+			//- 	tsat.hide();
+			//- })
+

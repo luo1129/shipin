@@ -1,0 +1,196 @@
+block config
+	-var title = '新闻详情';
+	-var css = 'pingce';
+	-var jquery = '_jquery.min';
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="js/flexible.js")
+		link(rel="stylesheet" href="css/#{css}.css")
+		script(src="/js/#{jquery}.js")
+	body
+		.p-content.p-w
+			.pc-listv
+				h2.f36.ftc 客户风险承受能力问卷
+				dl.clearfix
+					dt 1.年龄
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 18～35岁
+						label
+							input(type="radio" name="checkbox")
+							span 36～54岁
+						label
+							input(type="radio" name="checkbox")
+							span 55～74岁
+						label
+							input(type="radio" name="checkbox")
+							span 18岁一下／75岁以上
+				dl.clearfix
+					dt 2.文化程度
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 研究生及以上
+						label
+							input(type="radio" name="checkbox")
+							span 大本／大专
+						label
+							input(type="radio" name="checkbox")
+							span 大专以下
+				dl.clearfix
+					dt 3.婚姻状况
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 已婚无子女
+						label
+							input(type="radio" name="checkbox")
+							span 已婚有子女
+						label
+							input(type="radio" name="checkbox")
+							span 未婚
+				dl.clearfix
+					dt 4.在职情况
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 在职
+						label
+							input(type="radio" name="checkbox")
+							span 退休
+						label
+							input(type="radio" name="checkbox")
+							span 无业
+				dl.clearfix
+					dt 5.岗位性质
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 中层及以上职务
+						label
+							input(type="radio" name="checkbox")
+							span 部门主管
+						label
+							input(type="radio" name="checkbox")
+							span 一般员工及其他
+				dl.clearfix
+					dt 6.单位类别
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 金融／垄断企业
+						label
+							input(type="radio" name="checkbox")
+							span 大型企业
+						label
+							input(type="radio" name="checkbox")
+							span 中小型企业及其他
+				dl.clearfix
+					dt 7.个人年收入
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 20万以上
+						label
+							input(type="radio" name="checkbox")
+							span 20-10万
+						label
+							input(type="radio" name="checkbox")
+							span 10-5万
+						label
+							input(type="radio" name="checkbox")
+							span 5万以下
+				dl.clearfix
+					dt 8.房产
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 一套以上无贷
+						label
+							input(type="radio" name="checkbox")
+							span 按揭<50%
+						label
+							input(type="radio" name="checkbox")
+							span 按揭>50%
+						label
+							input(type="radio" name="checkbox")
+							span 租住
+				dl.clearfix
+					dt 9.投资经验－股龄（操作账户开始）
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 2年以上
+						label
+							input(type="radio" name="checkbox")
+							span 1-2年
+						label
+							input(type="radio" name="checkbox")
+							span 1年以内
+						label
+							input(type="radio" name="checkbox")
+							span 无
+				dl.clearfix
+					dt 10.您预计进行证券投资的资金占家庭现有总资产(不含房产、汽车等)的比例是：
+					dd
+						label
+							input(type="radio" name="checkbox")
+							span 基本没投资：除存款，国债，几乎没有其他投资没有其他投资经验
+						label
+							input(type="radio" name="checkbox")
+							span 基本没投资：除存款，国债，几乎没有其他投资经验
+						label
+							input(type="radio" name="checkbox")
+							span 基本没投资：除存款，国债，几乎没有其他投资经验
+						label
+							input(type="radio" name="checkbox")
+							span 基本没投资：除存款，国债，几乎没有其他投资经验
+			.botButton
+				input(type="button" value="提交答卷")#botButton
+		.WINBG
+			div
+		.floating#floatinga
+			h2.f36.cWhite.ftc 风险测评
+			dl.f28
+				dt 您需要先接受投资者风险承受能力测评后才可购买投顾产品！
+				dd
+					span 取消
+					a(href="").cBlue 去测评
+		.floating#floatingb
+			h2.f36.cWhite.ftc 测评结果
+			dl.f28
+				dt 您具有中等偏上风险承受能力；<br>您属于进取型投资者！
+				dd 确定
+		script.
+			var wbg = $('.WINBG'),
+				oBut = $('#botButton'),
+				fa = $('#floatinga'),
+				fb = $('#floatingb'),
+				h2 = $('h2.f36');
+			oBut.on('touchstart',function(){
+				wbg.show();
+				fa.show()
+			})
+			h2.on('touchstart',function(){
+				wbg.show();
+				fb.show()
+			})
+			fa.on('touchstart','span',function(){
+				wbg.hide();
+				fa.hide()
+			})
+			fb.on('touchstart','dd',function(){
+				wbg.hide();
+				fb.hide()
+			})
+
+
+

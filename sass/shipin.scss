@@ -1,0 +1,12 @@
+/* =include base.scss */
+body{background: #fff;}
+.pictop{width:100%;height: auto;margin-bottom: 20px;
+	img{width: 100%;height: auto;}
+}
+.playervideo{width:100%;height: 422px;overflow: hidden;}
+.sptext{width:100%;overflow: hidden;
+	dt{border-bottom: 1ssp solid #d3d3d3;padding:20px 0;
+		span{border-left:3ssp solid #a67651;height: 34px;vertical-align: middle;display: inline-block;margin-left:30px;padding-left:10px;font-size:30px;font-weight: bold;color:#a67651;}
+	}
+	dd{padding:30px;line-height: 1.4;font-size: 30px;}
+}

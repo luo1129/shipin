@@ -1,0 +1,127 @@
+block config
+	-var title = '个股行情';
+	-var jquery = '_jquery.min';
+	-var css = 'thigh';
+	-var js = "thigh";
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="js/flexible.js")
+		link(rel="stylesheet" href="css/#{css}.css")
+		script(src="/js/#{jquery}.js")
+		script(src="/js/echarts.min.js")
+		script(src="/js/#{js}.js")
+	body
+		.p-content.p-w
+			.p-titp.cWhite
+				h2.f34 京东方A(SZ000725)
+					span.f20 07-19 11:57:08
+				a(href="").t-arrow
+				a(href="").t-search
+			.m-gthigh.f30
+				dl.left
+					dt.f84 4.26
+					dd
+						i.f36 未上市
+				dl.right.add
+					dt
+					dd 添加自选股
+			script.
+				follow($('.m-gthigh'))
+			.m-gtListy
+				ul
+					li
+						i 今开
+						span 38.49
+
+					li
+						i 昨收
+						span 38.49
+
+					li
+						i 最高
+						span 38.49
+
+					li
+						i 最低
+						span 38.49
+				ul
+					li
+						i 涨家数
+						span 26903万
+
+					li
+						i 跌家数
+						span 10.41亿
+
+					li
+						i 平家数
+						span 38.49
+
+					li
+						i 成交额
+						span 200亿
+			.m-market
+				ul.tip.f30
+					li.hover 分时
+					li 五日
+					li 日K
+					li 周K
+					li 月K
+				.mkBoxt
+			script.
+				isHasthigh($('.tip li','.m-market'),$('.mkBoxt'))
+			.m-zhangdie
+				ul.tip.f30
+					li.hover 涨幅榜
+					li 跌幅榜
+					li 换手率
+				.zdBoxs
+					table(style="display:table;")
+						tr
+							th 股票名称
+							th 最新价
+							th 涨幅
+						-for(var i=0;i<8;i++)
+							tr
+								td 京东方A
+									span.f20 SH600120
+								td 2.33
+								td.cRed +1.23%
+					table
+						tr
+							th 股票名称
+							th 最新价
+							th 涨幅
+						-for(var i=0;i<8;i++)
+							tr
+								td 京东方B
+									span.f20 SH600120
+								td 2.332
+								td.cRed +1.23%
+					table
+						tr
+							th 股票名称
+							th 最新价
+							th 换手率
+						-for(var i=0;i<8;i++)
+							tr
+								td 京东方C
+									span.f20 SH600120
+								td 2.331
+								td +1.23%
+			script.
+				isNews($('li','.m-zhangdie'),$('table','.m-zhangdie'))
+				homeScroll($('.tip','.m-zhangdie'))
+
+
+
+
+
+

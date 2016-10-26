@@ -1,0 +1,88 @@
+block config
+	-var title = '行情－自选股－管理';
+	-var jquery = '_jquery.min';
+	-var css = 'thigh';
+	-var js = "thigh";
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="js/flexible.js")
+		link(rel="stylesheet" href="css/#{css}.css")
+		script(src="/js/#{jquery}.js")
+		script(src="/js/jquery-ui.min.js")
+		script(src="/js/jquery.ui.touch-punch.js")
+		script(src="/js/#{js}.js")
+	body
+		.p-content.p-w
+			.m-titp.cWhite
+				a.tlf.f28(href="") 管理
+				h2.f34.line88 我的自选股
+			.zxGuanli
+				ul.title
+					li 股票名称
+					li 置顶
+					li 拖动
+				.zxMiany
+					ul#my-ui-list
+						li(data-index='0')
+							label
+								input(type="checkbox" name="checkbox")
+							span 
+							b 京东方A
+								strong SH600120
+							i
+							em 
+						li(data-index='1')
+							label
+								input(type="checkbox" name="checkbox")
+							span 
+							b 京东方B
+								strong SH600120
+							i
+							em 
+						li(data-index='2')
+							label
+								input(type="checkbox" name="checkbox")
+							span 
+							b 京东方C
+								strong SH600120
+							i
+							em 
+						li(data-index='3')
+							label
+								input(type="checkbox" name="checkbox")
+							span 
+							b 京东方D
+								strong SH600120
+							i
+							em 
+				dl.zxfloot
+					dt
+						label
+							input(type="checkbox" name="checkbox")#checkboxall
+							| 全选
+					dd.zxDel 
+						span
+						|删除
+				span#del_null_notice 请选中要删除的股票
+				script.
+					$(function() {
+						$("#my-ui-list").sortable({
+							delay: 1000
+						});
+						$("#my-ui-list").disableSelection();
+					});
+					checkboxAll($('#checkboxall'),$('.zxMiany'),$('.zxDel'));
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+block config
+	-var title = '行情－综评';
+	-var jquery = '_jquery.min';
+	-var css = 'thigh';
+	-var js = "thigh";
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="js/flexible.js")
+		link(rel="stylesheet" href="css/#{css}.css")
+		script(src="/js/#{jquery}.js")
+		script(src="/js/jquery-ui.min.js")
+		script(src="/js/#{js}.js")
+	body.body-bg
+		.p-w
+			.m-titp
+				ul
+					li
+						a(href="") 自选股
+					li
+						a(href="") 沪深
+					li.cWhite
+						a(href="") 综评
+			.zp-content
+				dl.logo
+					dt
+					dd.f30 个股深度分析综合评述
+				dl.zsearch
+					dt
+					dd
+						input#zpSearch(type="text" value="输入要查询的股票名称或代码" initValue="输入要查询的股票名称或代码")
+				script.
+					setValue($('#zpSearch'))
+						var availableTags = [
+							"ActionScript",
+							"AppleScript",
+							"Asp",
+							"BASIC",
+							"C",
+							"C++",
+							"Clojure",
+							"COBOL",
+							"ColdFusion",
+							"Erlang",
+							"Fortran",
+							"Groovy",
+							"Haskell",
+							"Java",
+							"JavaScript",
+							"Lisp",
+							"Perl",
+							"PHP",
+							"Python",
+							"Ruby",
+							"Scala",
+							"Scheme"
+							];
+					$("#zpSearch").autocomplete({
+						source: availableTags
+							});
+				dl.zp-test
+					dt.f32 关于巨丰综评
+					dd.f26 通过加权平均的计算方法整合了国内150多家证券研究机构对个股的评级观点为投资者提供权威的研究机构评级汇总数据。通过整合多家研究机构的观点，使用户能地得到多家机构的汇总意见，有效规避由单一研究机构本身的专业性或者利益冲突等因素带来的投资风险，真正发挥出专业研究机构的研究结果的价值，为用户进行更可靠的价值投资提供有力的支持。
+
+
+
+
+
+
+

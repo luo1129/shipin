@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>行情－自选股－管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="js/flexible.js"></script>
+    <link rel="stylesheet" href="css/thigh.css">
+    <script src="/js/_jquery.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/jquery.ui.touch-punch.js"></script>
+    <script src="/js/thigh.js"></script>
+  </head>
+  <body>
+    <div class="p-content p-w">
+      <div class="m-titp cWhite"><a href="" class="tlf f28">管理</a>
+        <h2 class="f34 line88">我的自选股</h2>
+      </div>
+      <div class="zxGuanli">
+        <ul class="title">
+          <li>股票名称</li>
+          <li>置顶</li>
+          <li>拖动</li>
+        </ul>
+        <div class="zxMiany">
+          <ul id="my-ui-list">
+            <li data-index="0">
+              <label>
+                <input type="checkbox" name="checkbox">
+              </label><span> </span><b>京东方A<strong>SH600120</strong></b><i></i><em> </em>
+            </li>
+            <li data-index="1">
+              <label>
+                <input type="checkbox" name="checkbox">
+              </label><span> </span><b>京东方B<strong>SH600120</strong></b><i></i><em> </em>
+            </li>
+            <li data-index="2">
+              <label>
+                <input type="checkbox" name="checkbox">
+              </label><span> </span><b>京东方C<strong>SH600120</strong></b><i></i><em> </em>
+            </li>
+            <li data-index="3">
+              <label>
+                <input type="checkbox" name="checkbox">
+              </label><span> </span><b>京东方D<strong>SH600120</strong></b><i></i><em> </em>
+            </li>
+          </ul>
+        </div>
+        <dl class="zxfloot">
+          <dt>
+            <label>
+              <input type="checkbox" name="checkbox" id="checkboxall">全选
+            </label>
+          </dt>
+          <dd class="zxDel"> <span></span>删除</dd>
+        </dl><span id="del_null_notice">请选中要删除的股票</span>
+        <script>
+          $(function() {
+          	$("#my-ui-list").sortable({
+          		delay: 1000
+          	});
+          	$("#my-ui-list").disableSelection();
+          });
+          checkboxAll($('#checkboxall'),$('.zxMiany'),$('.zxDel'));
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

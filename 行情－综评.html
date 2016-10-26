@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>行情－综评</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="js/flexible.js"></script>
+    <link rel="stylesheet" href="css/thigh.css">
+    <script src="/js/_jquery.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/thigh.js"></script>
+  </head>
+  <body class="body-bg">
+    <div class="p-w">
+      <div class="m-titp">
+        <ul>
+          <li><a href="">自选股</a></li>
+          <li><a href="">沪深</a></li>
+          <li class="cWhite"><a href="">综评</a></li>
+        </ul>
+      </div>
+      <div class="zp-content">
+        <dl class="logo">
+          <dt></dt>
+          <dd class="f30">个股深度分析综合评述</dd>
+        </dl>
+        <dl class="zsearch">
+          <dt></dt>
+          <dd>
+            <input id="zpSearch" type="text" value="输入要查询的股票名称或代码" initValue="输入要查询的股票名称或代码">
+          </dd>
+        </dl>
+        <script>
+          setValue($('#zpSearch'))
+          	var availableTags = [
+          		"ActionScript",
+          		"AppleScript",
+          		"Asp",
+          		"BASIC",
+          		"C",
+          		"C++",
+          		"Clojure",
+          		"COBOL",
+          		"ColdFusion",
+          		"Erlang",
+          		"Fortran",
+          		"Groovy",
+          		"Haskell",
+          		"Java",
+          		"JavaScript",
+          		"Lisp",
+          		"Perl",
+          		"PHP",
+          		"Python",
+          		"Ruby",
+          		"Scala",
+          		"Scheme"
+          		];
+          $("#zpSearch").autocomplete({
+          	source: availableTags
+          		});
+        </script>
+        <dl class="zp-test">
+          <dt class="f32">关于巨丰综评</dt>
+          <dd class="f26">通过加权平均的计算方法整合了国内150多家证券研究机构对个股的评级观点为投资者提供权威的研究机构评级汇总数据。通过整合多家研究机构的观点，使用户能地得到多家机构的汇总意见，有效规避由单一研究机构本身的专业性或者利益冲突等因素带来的投资风险，真正发挥出专业研究机构的研究结果的价值，为用户进行更可靠的价值投资提供有力的支持。</dd>
+        </dl>
+      </div>
+    </div>
+  </body>
+</html>

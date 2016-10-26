@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+
+<body>
+    <canvas id="myCanvas">
+    </canvas>
+    <script src="/js/wuri.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function refreshOnTime() {
+        $.ajax({
+                url: "http://mt.tougub.com/stock/stockMarket/fiveDayTrend?code=603658",
+                dataType: "jsonp",
+                jsonp: "callback",
+                jsonpCallback: "flightHandler",
+                success: function(json) {
+                    if (json.code === 200) {
+                        wuri(json)
+                    } else {
+                        alert('kdkdkdkdkkdkdk')
+                    }
+                }
+            })
+            //7秒后重复执行该函数
+        setInterval('refreshOnTime', 7000);
+    }
+
+    //开始执行自己
+    refreshOnTime();
+    </script>
+</body>
+
+</html>

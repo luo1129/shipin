@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+
+<body>
+    <div class="m-rikiy">
+        <div class="left">
+            <canvas id="myCanvas"></canvas>
+        </div>
+        <div class="right">
+            <ul>
+                <li>
+                    <span>卖5</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+                <li>
+                    <span>卖4</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+                <li>
+                    <span>卖3</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+                <li>
+                    <span>卖2</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+                <li>
+                    <span>卖1</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+            </ul>
+            <ul class="m-mai">
+                <li>
+                    <span>买1</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+                <li>
+                    <span>买2</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+                <li>
+                    <span>买3</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+                <li>
+                    <span>买4</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+                <li>
+                    <span>买5</span>
+                    <i class="cRed">14.00</i>
+                    <em>12.86万</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/js/fenshiy.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function refreshOnTime() {
+        $.ajax({
+                url: "json/fenshi.json",
+                dataType: "json",
+                jsonp: "callback",
+                jsonpCallback: "flightHandler",
+                success: function(json) {
+                    if (json.code === 200) {
+                        fenshiy(json)
+                    } else {
+                        alert('kdkdkdkdkkdkdk')
+                    }
+                }
+            })
+            //7秒后重复执行该函数
+        setInterval('refreshOnTime', 7000);
+    }
+
+    //开始执行自己
+    refreshOnTime();
+    </script>
+</body>
+
+</html>

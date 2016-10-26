@@ -1,0 +1,122 @@
+/* RESET */
+@charset "utf-8";
+
+@function bg($img){@return '../../img/'+ $img + '?20160222';}
+@mixin tran($p:all,$t:0.5s,$f:ease){
+-webkit-transition: $p $t $f;
+   -moz-transition: $p $t $f;
+     -o-transition: $p $t $f;
+        transition: $p $t $f;
+}
+@mixin opacity($n:1){
+	opacity:$n;
+	filter:alpha(opacity=$n*100);
+}
+@mixin radius($lt,$rt:'eastnx',$rb:'eastnx',$lb:'eastnx'){
+	@if($rt == 'eastnx'){$rt : $lt}
+	@if($rb == 'eastnx'){$rb : $lt}
+	@if($lb == 'eastnx'){$lb : $lt}
+	-moz-border-radius:$lt $rt $rb $lb;
+	-webkit-border-radius:$lt $rt $rb $lb;
+	border-radius:$lt $rt $rb $lb;
+}
+@mixin setColor($class, $color){
+	.#{$class},.#{$class} a{
+		color:$color;
+	}
+	a.#{$class}:hover,.#{$class} a:hover{
+		color:$color;
+	}
+}
+
+
+$base : 75;
+
+$hover : #f95259;
+
+$red : #c31825;
+$white: #fff;
+$gray: #666;
+$yellow : #febf00;
+$black: #333;
+$blue: #33a2ff;
+$blues: #00009b;
+$orange:#a67651;
+$green: #4d9d76;
+
+
+$border:#d7d6d6;
+$background: #f9f9f9;
+
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{margin:0 auto;border-collapse:collapse;border-spacing:0}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+ol,ul{list-style:none}
+li{list-style:none;}
+a,button{cursor:pointer;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+img{vertical-align:top;border:0}
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{font-size:100%;font-weight:400}
+i,u,em,b,strong{font-style:normal;text-decoration:none;font-weight:400}
+
+/* skin */
+body{font-size:18px;font-family:"Microsoft YaHei","Open Sans",Arial,"Hiragino Sans GB","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;-webkit-text-size-adjust:none;color:#333;background: #f5f5f5;}
+input,textarea,button,select,keygen,legend,button{outline:none;resize:none;font-family:'Microsoft YaHei','Lucida Grande','Lucida Sans Unicode','Arial';color:#4D4D4D;}
+input:-webkit-autofill{-webkit-box-shadow: 0 0 0 1000px #fff inset;}
+a{color:#333;text-decoration:none;@include tran(color,.4s);
+	&:hover{color:$hover;text-decoration:none;@include tran(color,.2s);}
+}
+/*
+* font color
+*/
+@include setColor(cRed,$red);
+@include setColor(cYellow,$yellow);
+@include setColor(cWhite,$white);
+@include setColor(cGray,$gray);
+@include setColor(cBlack,$black);
+@include setColor(cBlue,$blue);
+@include setColor(cBlues,$blues);
+@include setColor(cOrange,$orange);
+@include setColor(cGreen,$green);
+/*
+* font
+*/
+.fy{font-family: 'Microsoft YaHei';}
+.fa{font-family:Arial}
+.fs{font-family:\5B8B\4F53}
+.fb{font-weight:bold}
+.fun,.fun:hover{text-decoration:underline;}
+.fjd{overflow:hidden;word-wrap:normal;white-space:nowrap;text-overflow:ellipsis;}
+.ftl{text-align:left;}
+.ftc{text-align:center;}
+.ftr{text-align:right;}
+/*
+* base
+*/
+.left{float:left;}
+.right{float:right;}
+.none{display:none;}
+.block{display:block;}
+.clear{clear:both;height:0;overflow:hidden;display:block}
+.clearfix{
+	*zoom:1;
+	&:after{clear:both;height:0;overflow:hidden;display:block;visibility:hidden;content:".";}
+}
+.css3img{
+	img{@include tran(opacity,.5s);}
+	a:hover img{@include opacity(.7);@include tran(opacity,.5s);}
+}
+.radius{@include radius(50%);}
+
+.p-w{width:750px;margin:0 auto;overflow: hidden;}
+.p-w:after,.p-w:before{display:table;content:" ";}
+.p-w:after{clear:both}
+.p-content{background:#eee;}

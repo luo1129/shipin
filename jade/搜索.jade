@@ -1,0 +1,64 @@
+block config
+	-var title = '搜索';
+	-var jquery = '_jquery.min';
+	-var css = 'thigh';
+	-var js = "thigh";
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="js/flexible.js")
+		link(rel="stylesheet" href="css/#{css}.css")
+		link(rel="stylesheet" href="css/searcha.css")
+		script(src="/js/#{jquery}.js")
+		script(src="/js/jquery-ui.min.js")
+		script(src="/js/#{js}.js")
+	body
+		.p-content.p-w
+			.s-search
+				a.trg.f34.cWhite(href="") 取消
+				dl
+					dt
+					dd
+						input#zpSearch(type="text" value="输入股票名称/代码" initValue="输入股票名称/代码")
+						span
+				script.
+					searchValue($('#zpSearch'));
+					var availableTags = [
+							"ActionScript",
+							"AppleScript",
+							"Asp",
+							"BASIC",
+							"C",
+							"C++",
+							"Clojure",
+							"COBOL",
+							"ColdFusion",
+							"Erlang",
+							"Fortran",
+							"Groovy",
+							"Haskell",
+							"Java",
+							"JavaScript",
+							"Lisp",
+							"Perl",
+							"PHP",
+							"Python",
+							"Ruby",
+							"Scala",
+							"Scheme"
+							];
+					$("#zpSearch").autocomplete({
+						source: availableTags
+							});
+
+
+
+
+
+

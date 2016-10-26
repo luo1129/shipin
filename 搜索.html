@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>搜索</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="js/flexible.js"></script>
+    <link rel="stylesheet" href="css/thigh.css">
+    <link rel="stylesheet" href="css/searcha.css">
+    <script src="/js/_jquery.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/thigh.js"></script>
+  </head>
+  <body>
+    <div class="p-content p-w">
+      <div class="s-search"><a href="" class="trg f34 cWhite">取消</a>
+        <dl>
+          <dt></dt>
+          <dd>
+            <input id="zpSearch" type="text" value="输入股票名称/代码" initValue="输入股票名称/代码"><span></span>
+          </dd>
+        </dl>
+        <script>
+          searchValue($('#zpSearch'));
+          var availableTags = [
+          		"ActionScript",
+          		"AppleScript",
+          		"Asp",
+          		"BASIC",
+          		"C",
+          		"C++",
+          		"Clojure",
+          		"COBOL",
+          		"ColdFusion",
+          		"Erlang",
+          		"Fortran",
+          		"Groovy",
+          		"Haskell",
+          		"Java",
+          		"JavaScript",
+          		"Lisp",
+          		"Perl",
+          		"PHP",
+          		"Python",
+          		"Ruby",
+          		"Scala",
+          		"Scheme"
+          		];
+          $("#zpSearch").autocomplete({
+          	source: availableTags
+          		});
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

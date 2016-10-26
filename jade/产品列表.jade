@@ -1,0 +1,104 @@
+block config
+	-var title = '投资大师';
+	-var css = 'kxlist';
+	-var jquery = '_jquery.min';
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="/js/flexible.js")
+		link(rel="stylesheet" href="/css/#{css}.css")
+		script(src="/js/#{jquery}.js")
+	body
+		.p-w
+			-for(var i=0;i<4;i++)
+				.cpList
+					.list.cWhite.dxj
+						a(href="")
+							dl.tip
+								dt
+									img(src="/img/logoa.png")
+									span.f34 短线金
+								dd
+									i.red.f26 订阅
+									span.f20 新动态马上通知
+						dl.bot.f28
+							dt 产品特点：产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产产品简介产介产介产介产
+							dd
+								a(href="")
+									img(src="/img/icon_right.png")
+					.list.cWhite.jjs
+						a(href="")
+							dl.tip
+								dt
+									img(src="/img/logoa.png")
+									span.f34 狙击手
+								dd
+									i.red.f26 订阅
+									span.f20 新动态马上通知
+						dl.bot.f28
+							dt 产品特点：产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产产品简介产介产...
+							dd
+								a(href="")
+									img(src="/img/icon_right.png")
+					.list.cWhite.tgzx
+						a(href="")
+							dl.tip
+								dt
+									img(src="/img/logoa.png")
+									span.f34 投顾专享
+								dd
+									i.red.f26 订阅
+									span.f20 新动态马上通知
+						dl.bot.f28
+							dt 产品特点：产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产产品简介产介产...
+							dd
+								a(href="")
+									img(src="/img/icon_right.png")
+					.list.cWhite.tzds
+						a(href="")
+							dl.tip
+								dt
+										img(src="/img/logoa.png")
+										span.f34 投资大师
+								dd
+									i.red.f26 订阅
+									span.f20 新动态马上通知
+						dl.bot.f28
+							dt 产品特点：产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产产品简介产介产...
+							dd
+								a(href="")
+									img(src="/img/icon_right.png")
+					.list.cWhite.cpds
+						a(href="")
+							dl.tip
+								dt
+										img(src="/img/logoa.png")
+										span.f34 操盘大师
+								dd
+									i.red.f26 订阅
+									span.f20 新动态马上通知
+						dl.bot.f28
+							dt 产品特点：产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产产品简介产介产...
+							dd
+								a(href="")
+									img(src="/img/icon_right.png")
+		script.
+			!function(){
+				var cpList = $('.cpList')
+				cpList.on('click','i',function(event){
+					event.preventDefault()
+					var _this = $(this)
+					if(_this.hasClass('red')){
+						_this.removeClass('red')
+						_this.text('已订阅')
+					}
+				})
+			}()
+
+

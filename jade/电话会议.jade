@@ -1,0 +1,50 @@
+block config
+	-var title = '投资大师';
+	-var css = 'kxlist';
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="/js/flexible.js")
+		link(rel="stylesheet" href="/css/#{css}.css")
+	body
+		.p-w
+			.dh-huiyi
+				h2.f32
+					img(src="/img/icon_telb.png")
+					| 近期电话会议预告
+				ul.dh-top
+					li
+						b  时间
+						span 2016/5/24  14:00
+					li
+						b  电话
+						span 400-633-5058
+					li
+						b  通话密码
+						span 4000
+			.dh-huiyi
+				h2.f32
+					img(src="/img/icon_time.png")
+					| 往期会议记录
+				ul.dh-list.cBlack
+					li
+						a(href="")
+							i 2016/5/23期电话会议
+							em 
+					li
+						a(href="")
+							i 2016/5/23期电话会议
+							em 
+					li
+						a(href="")
+							i 2016/5/23期电话会议
+							em 
+
+				.dh-bottom.cGray.ftc
+					a(href="") 加载更多

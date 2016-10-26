@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>一至预期</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="js/flexible.js"></script>
+    <link rel="stylesheet" href="css/thigh.css">
+    <script src="/js/_jquery.min.js"></script>
+    <script src="/js/thigh.js"></script>
+  </head>
+  <body>
+    <div class="p-content p-w">
+      <dl class="cp-introduce">
+        <dt class="f34"><a href=""><img src="/img/logoa.png"><span>短线金</span></a></dt>
+        <dd class="cWhite"><i id="guanzhu" class="red f30">订阅</i><span class="f20 cRed">新动态马上通知</span></dd>
+      </dl>
+      <div class="p-titp cWhite">
+        <h2 class="f34 line88">一至预期</h2><a href="" class="t-arrow"></a><i id="tTitlev"></i>
+      </div>
+      <div class="newsText pad130">
+        <h1 class="f36">标题标题标题标题标题标题标题标题标题</h1>
+        <h3 class="f26">来源来源 今天 09:27</h3>
+        <div class="text f30">
+          <p>今日，股指低开杀跌，单日大阴之下，已连续两个交易日大跌，累计近200点的跌幅，直接吃掉近一个半月的反弹。</p>
+          <p>今日，股指低开杀跌，单日大阴之下，已连续两个交易日大跌，累计近200点的跌幅，直接吃掉近一个半月的反弹。</p>
+          <p>今日，股指低开杀跌，单日大阴之下，已连续两个交易日大跌，累计近200点的跌幅，直接吃掉近一个半月的反弹。</p>
+          <p>今日，股指低开杀跌，单日大阴之下，已连续两个交易日大跌，累计近200点的跌幅，直接吃掉近一个半月的反弹。</p>
+          <p>今日，股指低开杀跌，单日大阴之下，已连续两个交易日大跌，累计近200点的跌幅，直接吃掉近一个半月的反弹。</p>
+          <p>今日，股指低开杀跌，单日大阴之下，已连续两个交易日大跌，累计近200点的跌幅，直接吃掉近一个半月的反弹。</p><img src="/img/img.jpg">
+          <div class="t-bot f26">风险提示：投资有风险，入市需谨慎！本文内容仅供参考，不作为投资建议，风险自负。</div>
+        </div>
+      </div>
+      <script>newTitle($('#tTitlev'),$('.newsText'))</script>
+    </div>
+    <dl class="n-fen">
+      <dd><i></i>点赞</dd>
+      <dt><i></i>分享</dt>
+    </dl>
+    <div class="error">你点过赞了，别再点了！！！</div>
+    <dl class="gz-floating">
+      <dt><b class="f32">提示</b>
+        <p class="f26">关注成功！发布新观点会马上通知您哦！</p>
+      </dt>
+      <dd class="f32 cBlue">确定</dd>
+    </dl>
+    <div class="WINBG">
+      <div></div>
+    </div>
+    <div class="fc-tanc">
+      <button>我知道了</button>
+    </div>
+    <script>
+      ! function(){
+      	var fen = $('dt','.n-fen'),zan=$('dd','.n-fen'),winbg = $('.WINBG'),fct=$('.fc-tanc'),button = $('button','.fc-tanc');
+      	var gzf = $('.gz-floating');
+      	fen.on('click',function(){
+      		winbg.show();
+      		fct.show();
+      	})
+      	button.on('click',function(){
+      		winbg.hide();
+      		fct.hide();
+      	})
+      	zan.on('click',function(){
+      	var _this = $(this),error = $('.error');
+      		if(_this.hasClass('hover')){
+      			error.show();
+      			setTimeout(function(){
+      				error.hide();
+      			},2000);
+      		}else{
+      			_this.addClass('hover')
+      		}
+      	})
+      	$('#guanzhu').on('click',function(){
+      		winbg.show();
+      		gzf.show();
+      	})
+      	gzf.on('click','dd',function(){
+      		winbg.hide();
+      		gzf.hide();
+      	})
+      }();
+    </script>
+  </body>
+</html>

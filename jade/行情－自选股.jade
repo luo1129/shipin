@@ -1,0 +1,73 @@
+block config
+	-var title = '行情－自选股';
+	-var jquery = '_jquery.min';
+	-var css = 'thigh';
+	-var js = "thigh";
+doctype html
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(content="yes" name="apple-mobile-web-app-capable")
+		meta(content="yes" name="apple-touch-fullscreen")
+		meta(content="telephone=no,email=no" name="format-detection")
+		script(src="js/flexible.js")
+		link(rel="stylesheet" href="css/#{css}.css")
+		script(src="/js/#{jquery}.js")
+		script(src="/js/#{js}.js")
+	body
+		.p-content.p-w
+			.m-titp
+				a.tlf.f28.cWhite(href="") 管理
+				a.t-search(href="") 
+				ul
+					li.cWhite
+						a(href="") 自选股
+					li
+						a(href="") 沪深
+					li
+						a(href="") 综评
+
+			.m-paixu
+				table.floaty(style="display:table;")
+					tr
+						th 股票名称
+						th
+							i.rise 最新价
+						th
+							i.drop 涨跌幅
+				table.mg78(style="display:table;")
+					-for(var i=0;i<7;i++)
+						tr
+							td 京东方A
+								span.f20 SH600120
+								a.click(href="")
+							td 2.33
+							td
+								em.cRed +1.23%
+						tr
+							td 京东方A
+								span.f20 SH600120
+								a.click(href="")
+							td 2.33
+							td
+								em.cGary +1.23%
+						tr
+							td 京东方A
+								span.f20 SH600120
+								a.click(href="")
+							td 2.33
+							td
+								em.cGreen +1.23%
+				a(href="")
+					.m-button_add.f32
+						span
+						| 添加自选股
+
+
+
+
+
+
+

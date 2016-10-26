@@ -1,0 +1,130 @@
+/* =include base.scss */
+body{background: #fff;}
+.f18{font-size:18px;}
+.f22{font-size:22px;}
+.f24{font-size:24px;}
+.f30{font-size:30px;}
+.f32{font-size:32px;}
+ body {
+  -webkit-overflow-scrolling:touch;
+  overflow-scrolling: touch;
+}
+input,
+textarea {
+    border: 0;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.picVideo{width:100%;position: fixed;top:0;left:0;background: #fff;z-index:299;}
+.pictop{width:100%;height: auto;position:relative;background: #000;
+	img{width: 100%;height: auto;}
+	a{width:86px;height: 86px;overflow: hidden;background: url(../img/icon_arrow.png) no-repeat center;background-size:27px 44px;position: absolute;left:0;top:0;}
+}
+.playervideo{width:100%;height: 422px;overflow: hidden;background: #000;}
+.maError{width:350px;height: 80px;overflow: hidden;position:fixed;top:50%;left:50%;margin:-40px 0 0 -175px;line-height:80px;text-align:center;z-index:300;border-radius: 20px;
+	dt{color:#fff;position: absolute;left:0;top:0;width:100%;z-index: 1}
+	dd{width:100%;height: 80px;position:absolute;left:0;top:0;background: #000;opacity:0.6;z-index: 0}
+}
+.pinglunList{width:100%;height: 88px;border-bottom: 1ssp solid #eee;
+	li{width:33.33%;float:left;text-align:center;line-height: 88px;
+		&.hover{color:#c32531;border-bottom:1ssp solid #c32531;font-size:32px;}
+	}
+}
+.vibsptext{width:100%;overflow: hidden;
+	dt{text-align: center;line-height: 100px;}
+	dd{padding:30px;line-height: 1.4;}
+}
+.floatingTsa{width:584px;height: 420px;border-radius:15px;position:absolute;left:50%;top:140px;background: #fff;z-index:1999;overflow: hidden;margin-left:-290px;
+	h2{width:100%;height: 88px;background: url(../img/title_bg.png) #525962;background-size:cover;line-height: 88px;font-size:36px;text-align: center;color:#fff;overflow: hidden;}
+	dl{width:528px;margin:44px auto 10px;
+		dt{line-height: 40px;height: 110px;font-size: 30px;
+			a{text-decoration:underline;}
+		}
+		input{width:99%;margin:0 auto;border:1ssp solid #eee;font-size:30px;text-align: center;line-height: 62px;font-size:28px;font-family:"Lantinghei SC";
+			&::-webkit-input-placeholder{color:#ccc;}
+			&::-moz-placeholder{color:#ccc;}
+		}
+	}
+	.bottom{margin-top:20px;border-top:1ssp solid #eee;width:100%;text-align:center;font-size:28px;line-height: 88px;
+		span{color:#999;width:50%;display:inline-block;}
+		a{width:48%;display:inline-block;border-left: 1ssp solid #eee;}
+	}
+}
+.WINBG{height:100%;width:100%;position:fixed;left:0;top:0;z-index:1000;overflow:hidden;background:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0F000000,endColorstr=#0F000000);}
+.WINBG div{width:100%;height:100%;background:#000;position:absolute;left:0;top:0;z-index:2;filter:alpha(opacity=60);opacity:0.6}
+.videoBox{width:750px;overflow-x:hidden;overflow-y:scroll;height: auto;position:fixed;top:600px;bottom:100px;z-index:3;left:50%;margin-left: -375px;
+	&::-webkit-scrollbar{width:12px;background-color: #F5F5F5;}
+	&::-webkit-scrollbar-thumb {border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: #555;}
+	&::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 10px;background-color: #F5F5F5;}
+}
+.vibpinglun{width:700px;overflow: hidden;padding:26px 25px 20px;
+	dl{margin:0 0 35px;width:700px;float:left;
+		dt{width:68px;height: 68px;border-radius:50%;overflow: hidden;float:left;box-shadow: 0px 0px 4px #ddd;
+			img{width:100%;height: 100%;}
+		}
+		dd{float:right;width:605px;overflow: hidden;
+			span{color:#afafb8;line-height: 46px;display: inline-block;
+				&.cYellowa{color:#a67651;}
+			}
+			i{width:60px;height:24px;background:url(../img/icon_guanliyuan.png) no-repeat;background-size:100%;display: inline-block;margin:10px 10px 0 0;float:left;}
+			p{line-height: 1.5;word-break:break-all; word-wrap:break-word;}
+		}
+	}
+}
+.videoListy{position:fixed;left:0;bottom:0;height:100px;z-index:13;}
+.vibshuruPl{background: #f5f5f5;border-top:1ssp solid #eee;height:85px;padding-top:15px;position:fixed;bottom:0;left:50%;margin-left:-375px;width:750px;overflow: hidden;
+		input{width:510px;border:1ssp solid #d9d9d9;background:#fff;height:70px;line-height: 70px;font-size:28px;padding:0 20px;float:left;margin-left:30px;border-radius:10px;}
+		button{float:right;width:118px;height: 70px;line-height: 70px;font-size:36px;text-align: center;color:#fff;background: #c32531;margin-right:30px;border:none;border-radius:10px;
+			&.disabled{background: #d9d9d9;}
+		}
+}
+.vibguwen{padding:30px 25px 20px;overflow: hidden;width:700px;
+	.top{height:60px;text-align: center;width:100%;float:left;
+		i{background:#cecece;padding:2px 15px 0;line-height: 42px;color:#fff;display: inline-block;border-radius: 10px;}
+	}
+	dl{width:100%;padding-bottom: 30px;float:left;
+		dt{width:68px;height: 68px;overflow: hidden;border-radius:50%;box-shadow: 0 0 4px #ddd;margin-top:5px;
+			img{width:100%;height: 100%;}
+		}
+		dd{
+			p{padding:18px 18px 15px;max-width:480px;position:relative;border-radius: 15px;word-break:break-all; word-wrap:break-word;}
+		}
+	}
+	.listLeft{
+		dd,dt{float:left;}
+		dd{margin-left:24px;background: #fff;
+			p{border:1ssp solid #d1d1d1;
+				&:before {content: ' ';position:absolute;z-index:1;top: 20px;left: -32px;width:0;border:17px solid transparent;border-right-color: #d1d1d1;}
+				&:after {content: ' ';position:absolute;z-index:2;top: 20px;left: -30px;width:0;border:17px solid transparent;border-right-color: #fff;}				
+			}
+		}
+	}
+	.listRgt{
+		dd,dt{float:right;}
+		dd{margin-right:24px;
+			p{background: #5b9bf4;color:#fff;
+				&:after {content: ' ';position:absolute;z-index:2;top: 20px;right: -32px;width:0;border:17px solid transparent;border-left-color: #5b9bf4;}				
+			}
+		}
+	}
+}
+
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+} 
+@media screen and (orientation: landscape) {
+  /*横屏 css*/
+	.p-w{width:100%;}
+	.picVideo{position: static;width:100%;}
+	.videoBox{position:static;margin:0 auto;
+		&::-webkit-scrollbar{width:0px;background-color: #fff;}
+		&::-webkit-scrollbar-thumb {border-radius: 0px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: #fff;}
+		&::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);border-radius: 0px;background-color: #fff;}
+	}
+	.floatingTsa{top:40px;position:fixed;}
+}
+
+
+
+
+

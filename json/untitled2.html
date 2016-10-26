@@ -1,0 +1,31 @@
+<html lang="en">
+
+<body>
+    <canvas id="myCanvas" width="400" height="400">
+    </canvas>
+    <script src="/js/rik.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function refreshOnTime() {
+        $.ajax({
+                url: "http://testmt.tougub.com/stock/stockMarket/kline?code=000002&type=0",
+                dataType: "jsonp",
+                jsonp: "callback",
+                jsonpCallback: "flightHandler",
+                success: function(json) {
+                    if (json.code === 200) {
+                        tiangetDate(json)
+                    } else {
+                        alert('kdkdkdkdkkdkdk')
+                    }
+                }
+            })
+            //7秒后重复执行该函数
+        setInterval('refreshOnTime', 7000);
+    }
+
+    //开始执行自己
+    refreshOnTime();
+    </script>
+</body>
+
+</html>

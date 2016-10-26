@@ -1,0 +1,40 @@
+/* =include base.scss */
+.f20{font-size:20px;}
+.f24{font-size:24px;}
+.f26{font-size:26px;}
+.f28{font-size:28px;}
+.f30{font-size:30px;}
+.f32{font-size:32px;}
+.f34{font-size:34px;}
+.f36{font-size:36px;}
+body,body:before{background: #fff;}
+.p-content{background: #fff;}
+.pc-listv{padding:30px 0;width: 100%;
+	h2{height: 68px;}
+	dl{width: 100%;font-size:28px;}
+	dt{background: #f5f5f5;padding:15px 30px;width: 690px;line-height: 38px;color:#000;}
+	dd{padding:30px;width:690px;z-index: 1;}
+	label{min-height: 28px;float:left;width:100%;padding-bottom: 40px;z-index: 2;
+		span{padding:0 0 0 10px;float:left;line-height: 36px;width: 650px;}
+	}
+	input[type=radio]{-webkit-appearance:none;appearance:none;margin:3px 0 0;cursor:pointer;vertical-align:middle;background:#f2f2f2;border:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;border-radius: 50%;border:1ssp solid #b8b8b8;float:left;width:26px;height: 26px;}
+	input[type=radio]:checked{background: #fff;}
+	input[type=radio]:checked:before{content: " ";overflow: hidden;position: absolute;background: #0099ff;width:16px;height: 16px;border-radius: 50%;left:4px;top:4px;}
+}
+.botButton{text-align: center;
+	input[type=button]{-webkit-appearance:none;appearance:none;width:580px;height: 80px;overflow: hidden;background: #ea1717;margin:20px auto;color:#fff;font-size: 30px;border:none;border-radius:20px;}
+}
+.WINBG,.WINBGY{height:100%;width:100%;position:fixed;left:0;top:0;z-index:1000;overflow:hidden;background:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0F000000,endColorstr=#0F000000);display: none;
+	div{width:100%;height:100%;background:#000;position:absolute;left:0;top:0;z-index:2;filter:alpha(opacity=30);opacity:0.3}
+}
+.floating{width:584px;background: #fff;overflow: hidden;height: 390px;border-radius: 30px;position:fixed;left:50%;top:50%;margin:-195px 0 0 -290px;z-index: 1001;display: none;
+	h2{height: 88px;line-height: 88px;width:100%;background: url(../img/title_bg.png) no-repeat #525962;background-size:cover;overflow: hidden;}
+	dl{width:100%;overflow: hidden;}
+	dt{padding:44px 30px 0;height: 168px;line-height: 38px;}
+	dd{border-top:1ssp solid #eee;text-align: center;width: 100%;line-height: 88px;
+		span{width:50%;border-right: 1ssp solid #eee;color:#999;display: inline-block;box-sizing:border-box;}
+		a{width:50%;display: inline-block;}
+	}
+}
+
+
